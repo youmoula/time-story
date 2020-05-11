@@ -2,7 +2,7 @@
   <% page.posts.each(function(post){ %>
     <%- partial('article', {post: post, index: true}) %>
   <% }) %>
-<% } else { %>
+<% } else if(pagination ==1){ %>
   <% var last; %>
   <% page.posts.each(function(post, i){ %>
     <% var year = post.date.year(); %>
@@ -22,7 +22,32 @@
   <% if (page.posts.length){ %>
     </div></section>
   <% } %>
+
+<%} else {%>
+<div class="tree_04">
+<div class="row-fluid tree_04 " >
+
+  <div class="tree-left-foli archives col-lg-6 col-md-6 col-xs-6 pull-left">
+  <% page.posts.each(function(post, i){%>
+      <%if (i % 2 != 0) {%>
+      <%- partial('archive-post', {post: post}) %>
+      <%}%>
+  <% }) %>
+  </div>
+  <div class="tree-right-foli archives-r col-lg-6 col-md-6 col-xs-6 pull-right">
+  <% page.posts.each(function(post, i){%>
+      <%if (i % 2 == 0) {%>
+      <%- partial('archive-post', {post: post}) %>
+      <%}%>
+  <% }) %>
+  </div>
+</div>
+<div class="row-fluid tree_03" ><img src="/images/layout_bg_03.jpg" style="width:100%;height:auto;" /></div>
+<div class="row-fluid tree_02"><img src="/images/layout_bg_02.jpg" style="width:100%;height:auto;" /></div>
+<div class="row-fluid tree_01"><img src="/images/layout_bg_01.jpg" style="width:100%;height:auto;" /></div>
+</div>
 <% } %>
+
 <% if (page.total > 1){ %>
   <nav id="page-nav">
     <% var prev_text = "&laquo; " + __('prev');var next_text = __('next') + " &raquo;"%>

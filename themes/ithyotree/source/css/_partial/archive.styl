@@ -1,3 +1,32 @@
+.tree_01x{
+  background-image:url('/images/layout_bg_01.jpg');
+  background-size: contain;
+  min-height:600px;
+  background-position:top center;
+  background-repeat:no-repeat;
+}
+.tree_02x{
+  background-image:url('/images/layout_bg_02.jpg');
+  background-size: contain;
+  min-height:600px;
+  background-position:center center;
+  background-repeat:no-repeat;
+}
+.tree_03x{
+  background-image:url('/images/layout_bg_03.jpg');
+  background-size: contain;
+  min-height:600px;
+  background-position:center center;
+  background-repeat:no-repeat;
+}
+.tree_04{
+  background-image:url('/images/layout_bg_04.jpg');
+  background-size: contain;
+  min-height:600px;
+  background-position:bottom center;
+  background-repeat:repeat-y;
+}
+
 .archives-wrap
   margin: block-margin 0
 
@@ -5,12 +34,30 @@
   clearfix()
 
 .archives article
+  transform: rotate(9deg)
+
+.archives
+  text-align:left
+
+.archives-r
+  text-align:right
+
+.archives-r article
+  transform: rotate(-9deg)
+
+.archives-r article,.archives article
   -webkit-writing-mode: vertical-rl
   -webkit-text-orientation: upright
   text-orientation :upright
   text-combine-upright :nav-down
   display: initial;
-  transform: rotate(-5deg)
+  white-spacing: nowrap;
+  white-space: nowrap;
+  letter-spacing: -1px;
+  opacity:(1.8) !important;
+  -moz-opacity:1.8 !important;
+  font-family: monospace,'楷体';
+
 
 .archive-year-wrap
   margin-bottom: 1em
@@ -35,7 +82,7 @@
 
 .archive-article-title
   text-decoration: none
-  font-weight: bold
+  font-weight:bold
   color: color-default
   transition: color 0.2s
   line-height: line-height
@@ -46,7 +93,7 @@
   margin-top: 1em
 
 .archive-article-date
-  color: color-grey
+  color: color-black
   text-decoration: none
   font-size: 0.85em
   line-height: 1em
@@ -68,7 +115,7 @@
     line-height: 1
     height: 2ex
   a
-    color: color-grey
+    color: color-black
     text-decoration: none
     &:hover
       background: color-grey
