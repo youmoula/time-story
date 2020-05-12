@@ -104,4 +104,7 @@ pjax: false
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: ''
+  type: git
+  repo: https://github.com/youmoula/time-story.git
+  branch: master
+  message:
