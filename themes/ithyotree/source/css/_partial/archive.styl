@@ -36,6 +36,10 @@
 
 .archives article
   transform: rotate(9deg)
+  -moz-transform: rotate(9deg);
+  -webkit-transform: rotate(9deg);
+  -ms-transform: rotate(9deg);
+  -o-transform: rotate(9deg);
 
 .archives
   text-align:left
@@ -45,10 +49,21 @@
 
 .archives-r article
   transform: rotate(-9deg)
+  -moz-transform: rotate(-9deg);
+  -webkit-transform: rotate(-9deg);
+  -ms-transform: rotate(-9deg);
+  -o-transform: rotate(-9deg);
 
 .archives-r article,.archives article
   -webkit-writing-mode: vertical-rl
+  -ms-writing-mode: tb-rl;
+  -moz-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
   -webkit-text-orientation: upright
+  -ms-text-orientation: upright;
+  -webkit-text-orientation: upright;
+  -moz-text-orientation: upright;
   text-orientation :upright
   text-combine-upright :nav-down
   display: initial;
@@ -57,6 +72,7 @@
   letter-spacing: -1px;
   opacity:(1.8) !important;
   -moz-opacity:1.8 !important;
+  filter:alpha(opacity=100);
   font-family: monospace,'楷体';
 
 
